@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <IndentedTree/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import IndentedTree from './components/IndentedTree.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+      IndentedTree
   }
 }
 </script>
