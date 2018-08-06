@@ -1,23 +1,19 @@
 <template>
-  <div id="app">
-    <TreeView :tree="tree"/>
-  </div>
+    <div id="app">
+        <div>
+            <router-link to="/hello_world">Hello World</router-link>
+        </div>
+        <div>
+            <router-link to="/call_tree">Call Tree</router-link>
+        </div>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-import TreeView from "./components/TreeView.vue"
-
-const callTreeData = require("./assets/render_index.json")
-
 export default {
     name: 'app',
-    data: function () {
-        return {
-            tree: callTreeData
-        }
-    },
     components: {
-        TreeView
     }
 }
 </script>
