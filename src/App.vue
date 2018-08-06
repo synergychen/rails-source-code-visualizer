@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <IndentedTree/>
+    <TreeView :tree="tree"/>
   </div>
 </template>
 
 <script>
-import IndentedTree from './components/IndentedTree.vue'
+import TreeView from "./components/TreeView.vue"
+
+const callTreeData = require("./assets/render_index.json")
 
 export default {
-  name: 'app',
-  components: {
-      IndentedTree
-  }
+    name: 'app',
+    data: function () {
+        return {
+            tree: callTreeData
+        }
+    },
+    components: {
+        TreeView
+    }
 }
 </script>
 
